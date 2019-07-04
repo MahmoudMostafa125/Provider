@@ -34,7 +34,7 @@ public class SignUP extends AppCompatActivity {
     TextView textViewEdu;
     Context context;
     Spinner SpinnerEdu, SpinnerEllearning;
-    ArrayAdapter<String> adapter,adapterE;
+    ArrayAdapter<String> adapter, adapterE;
     public static List<String> SpinnerListEmp, SpinnerListElearnig;
 
     private Animation animShow, animHide, animShowre, animHidere;
@@ -49,9 +49,9 @@ public class SignUP extends AppCompatActivity {
     Button buttonSelectProINST, buttonPreviousproINST, buttonNextFacIDINST, buttonPreviousFacIDINST,
             buttonNextSecIDINST, buttonPreviousDateINST, buttonNextDataINST, buttonNextNextINST, buttonNextVerIDINST, buttonPreviousVerIDINST, buttonPreviousFLINST;
 
-    Button NextE,PreviousE;
+    Button NextE, PreviousE;
     LinearLayout EID;
-    boolean Check =false;
+    boolean Check = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -112,9 +112,11 @@ public class SignUP extends AppCompatActivity {
 
         /**///////////////////////
         NextE = findViewById(R.id.next_E_id);
-        PreviousE =findViewById(R.id.previous_E_id);
+        PreviousE = findViewById(R.id.previous_E_id);
         EID = findViewById(R.id.E_id);
 
+
+        final Animation mShakeAnimation;
 ////////////////////////////////////////////////
         Imge = findViewById(R.id.img);
 
@@ -175,14 +177,14 @@ public class SignUP extends AppCompatActivity {
 
 
         //////////////////////////////////////////////////////
+        mShakeAnimation = AnimationUtils.loadAnimation(this, R.anim.shake_animation);
 
         buttonSelectPro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-
                 if (SpinnerEdu.getSelectedItemPosition() == 1) {
-                    Check =true;
+                    Check = true;
                     Imge.setImageDrawable(ContextCompat.getDrawable(context, R.mipmap.p2));
                     linearLayoutSelect.startAnimation(animShow);
                     linearLayoutSelect.setVisibility(View.GONE);
@@ -191,7 +193,7 @@ public class SignUP extends AppCompatActivity {
                     linearLayoutUni.startAnimation(animHide);
 
                 } else if (SpinnerEdu.getSelectedItemPosition() == 2) {
-                    Check =true;
+                    Check = true;
                     Imge.setImageDrawable(ContextCompat.getDrawable(context, R.mipmap.p2));
                     linearLayoutSelectINST.startAnimation(animShow);
                     linearLayoutSelectINST.setVisibility(View.GONE);
@@ -199,7 +201,7 @@ public class SignUP extends AppCompatActivity {
                     linearLayoutUniINST.setVisibility(View.VISIBLE);
                     linearLayoutUniINST.startAnimation(animHide);
                 } else if (SpinnerEdu.getSelectedItemPosition() == 3) {
-                    Check =false;
+                    Check = false;
 
                     Imge.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.e2));
                     linearLayoutSelect.startAnimation(animShow);
@@ -207,7 +209,14 @@ public class SignUP extends AppCompatActivity {
 
                     EID.setVisibility(View.VISIBLE);
                     EID.startAnimation(animHide);
+                }else {
+
+
+                    buttonSelectPro.startAnimation(mShakeAnimation);
+                    Toast.makeText(context, "Enter Education type !!!", Toast.LENGTH_SHORT).show();
+
                 }
+
             }
         });
 
@@ -229,6 +238,12 @@ public class SignUP extends AppCompatActivity {
                     linearLayoutUniINST.setVisibility(View.VISIBLE);
                     linearLayoutUniINST.startAnimation(animHide);
                     Imge.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.e3));
+                }else {
+
+
+                    NextE.startAnimation(mShakeAnimation);
+                    Toast.makeText(context, "Enter Education type !!!", Toast.LENGTH_SHORT).show();
+
                 }
             }
         });
@@ -236,14 +251,14 @@ public class SignUP extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if (Check){
+                if (Check) {
                     Imge.setImageDrawable(ContextCompat.getDrawable(context, R.mipmap.p1));
                     linearLayoutUni.setVisibility(View.GONE);
                     linearLayoutUni.startAnimation(animHidere);
 
                     linearLayoutSelect.startAnimation(animShowre);
                     linearLayoutSelect.setVisibility(View.VISIBLE);
-                }else{
+                } else {
                     Imge.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.e2));
                     linearLayoutUni.setVisibility(View.GONE);
                     linearLayoutUni.startAnimation(animHidere);
@@ -264,9 +279,9 @@ public class SignUP extends AppCompatActivity {
                 LinearLayoutFac.setVisibility(View.VISIBLE);
                 LinearLayoutFac.startAnimation(animHide);
 
-                if (Check){
+                if (Check) {
                     Imge.setImageDrawable(ContextCompat.getDrawable(context, R.mipmap.p3));
-                }else{
+                } else {
                     Imge.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.e4));
                 }
             }
@@ -280,9 +295,9 @@ public class SignUP extends AppCompatActivity {
                 linearLayoutUni.startAnimation(animShowre);
                 linearLayoutUni.setVisibility(View.VISIBLE);
 
-                if (Check){
+                if (Check) {
                     Imge.setImageDrawable(ContextCompat.getDrawable(context, R.mipmap.p2));
-                }else{
+                } else {
                     Imge.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.e3));
                 }
             }
@@ -298,9 +313,9 @@ public class SignUP extends AppCompatActivity {
                 LinearLayoutsec.setVisibility(View.VISIBLE);
                 LinearLayoutsec.startAnimation(animHide);
 
-                if (Check){
+                if (Check) {
                     Imge.setImageDrawable(ContextCompat.getDrawable(context, R.mipmap.p4));
-                }else{
+                } else {
                     Imge.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.e5));
                 }
             }
@@ -316,9 +331,9 @@ public class SignUP extends AppCompatActivity {
                 linearLayoutVer.setVisibility(View.VISIBLE);
                 linearLayoutVer.startAnimation(animHide);
 
-                if (Check){
+                if (Check) {
                     Imge.setImageDrawable(ContextCompat.getDrawable(context, R.mipmap.p6));
-                }else{
+                } else {
                     Imge.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.e7));
                 }
             }
@@ -332,9 +347,9 @@ public class SignUP extends AppCompatActivity {
 
                 LinearLayoutsec.startAnimation(animShowre);
                 LinearLayoutsec.setVisibility(View.VISIBLE);
-                if (Check){
+                if (Check) {
                     Imge.setImageDrawable(ContextCompat.getDrawable(context, R.mipmap.p4));
-                }else{
+                } else {
                     Imge.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.e5));
                 }
             }
@@ -349,9 +364,9 @@ public class SignUP extends AppCompatActivity {
                 linearLayoutData.setVisibility(View.VISIBLE);
                 linearLayoutData.startAnimation(animHide);
 
-                if (Check){
+                if (Check) {
                     Imge.setImageDrawable(ContextCompat.getDrawable(context, R.mipmap.p5));
-                }else{
+                } else {
                     Imge.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.e6));
                 }
             }
@@ -366,9 +381,9 @@ public class SignUP extends AppCompatActivity {
                 linearLayoutFL.setVisibility(View.VISIBLE);
                 linearLayoutFL.startAnimation(animHide);
 
-                if (Check){
+                if (Check) {
                     Imge.setImageDrawable(ContextCompat.getDrawable(context, R.mipmap.p7));
-                }else{
+                } else {
                     Imge.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.e8));
                 }
             }
@@ -384,9 +399,9 @@ public class SignUP extends AppCompatActivity {
                 linearLayoutData.setVisibility(View.VISIBLE);
 
 
-                if (Check){
+                if (Check) {
                     Imge.setImageDrawable(ContextCompat.getDrawable(context, R.mipmap.p5));
-                }else{
+                } else {
                     Imge.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.e6));
                 }
             }
@@ -402,9 +417,9 @@ public class SignUP extends AppCompatActivity {
                 linearLayoutVer.setVisibility(View.VISIBLE);
 
 
-                if (Check){
+                if (Check) {
                     Imge.setImageDrawable(ContextCompat.getDrawable(context, R.mipmap.p6));
-                }else{
+                } else {
                     Imge.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.e7));
                 }
             }
@@ -426,15 +441,14 @@ public class SignUP extends AppCompatActivity {
             public void onClick(View v) {
 
 
-
-                if (Check){
+                if (Check) {
                     Imge.setImageDrawable(ContextCompat.getDrawable(context, R.mipmap.p1));
                     linearLayoutUniINST.setVisibility(View.GONE);
                     linearLayoutUniINST.startAnimation(animHidere);
 
                     linearLayoutSelectINST.startAnimation(animShowre);
                     linearLayoutSelectINST.setVisibility(View.VISIBLE);
-                }else{
+                } else {
                     Imge.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.e2));
 
                     linearLayoutUniINST.setVisibility(View.GONE);
@@ -456,9 +470,9 @@ public class SignUP extends AppCompatActivity {
                 LinearLayoutFacINST.startAnimation(animHide);
 
 
-                if (Check){
+                if (Check) {
                     Imge.setImageDrawable(ContextCompat.getDrawable(context, R.mipmap.p3));
-                }else{
+                } else {
                     Imge.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.e4));
                 }
             }
@@ -504,9 +518,9 @@ public class SignUP extends AppCompatActivity {
                 LinearLayoutsec.setVisibility(View.VISIBLE);
                 LinearLayoutsec.startAnimation(animHide);
 
-                if (Check){
+                if (Check) {
                     Imge.setImageDrawable(ContextCompat.getDrawable(context, R.mipmap.p4));
-                }else{
+                } else {
                     Imge.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.e5));
                 }
             }
@@ -522,9 +536,9 @@ public class SignUP extends AppCompatActivity {
                 linearLayoutVer.setVisibility(View.VISIBLE);
                 linearLayoutVer.startAnimation(animHide);
 
-                if (Check){
+                if (Check) {
                     Imge.setImageDrawable(ContextCompat.getDrawable(context, R.mipmap.p6));
-                }else{
+                } else {
                     Imge.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.e7));
                 }
             }
@@ -540,9 +554,9 @@ public class SignUP extends AppCompatActivity {
                 LinearLayoutsec.setVisibility(View.VISIBLE);
 
 
-                if (Check){
+                if (Check) {
                     Imge.setImageDrawable(ContextCompat.getDrawable(context, R.mipmap.p4));
-                }else{
+                } else {
                     Imge.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.e5));
                 }
             }
@@ -558,9 +572,9 @@ public class SignUP extends AppCompatActivity {
                 linearLayoutData.startAnimation(animHide);
                 Imge.setImageDrawable(ContextCompat.getDrawable(context, R.mipmap.p5));
 
-                if (Check){
+                if (Check) {
                     Imge.setImageDrawable(ContextCompat.getDrawable(context, R.mipmap.p5));
-                }else{
+                } else {
                     Imge.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.e6));
                 }
             }
@@ -576,9 +590,9 @@ public class SignUP extends AppCompatActivity {
                 linearLayoutFL.startAnimation(animHide);
 
 
-                if (Check){
+                if (Check) {
                     Imge.setImageDrawable(ContextCompat.getDrawable(context, R.mipmap.p7));
-                }else{
+                } else {
                     Imge.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.e8));
                 }
             }
@@ -593,9 +607,9 @@ public class SignUP extends AppCompatActivity {
                 linearLayoutData.startAnimation(animShowre);
                 linearLayoutData.setVisibility(View.VISIBLE);
 
-                if (Check){
+                if (Check) {
                     Imge.setImageDrawable(ContextCompat.getDrawable(context, R.mipmap.p5));
-                }else{
+                } else {
                     Imge.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.e6));
                 }
             }
@@ -611,9 +625,9 @@ public class SignUP extends AppCompatActivity {
                 linearLayoutVer.setVisibility(View.VISIBLE);
                 Imge.setImageDrawable(ContextCompat.getDrawable(context, R.mipmap.p6));
 
-                if (Check){
+                if (Check) {
                     Imge.setImageDrawable(ContextCompat.getDrawable(context, R.mipmap.p6));
-                }else{
+                } else {
                     Imge.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.e7));
                 }
             }

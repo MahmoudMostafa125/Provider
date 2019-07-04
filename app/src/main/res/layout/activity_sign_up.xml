@@ -1,0 +1,1306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.SignUP">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:src="@mipmap/edulogo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_marginTop="22dp"
+            android:fontFamily="@font/montserratbold"
+            android:text="SIGN UP"
+            android:textColor="@color/black"
+            android:textSize="25dp" />
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:src="@mipmap/p1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/select_pro_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_marginTop="22dp"
+                    android:fontFamily="@font/montserratbold"
+                    android:text="Select provider Type"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/linearedu"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="50dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/edu"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/userdarkgray" />
+
+                        <TextView
+                            android:id="@+id/edutxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:text="Education" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="50dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@mipmap/userdarkgray" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:text="Accommodation" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Spinner
+                        android:id="@+id/spinneredu"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="@drawable/border_edit"
+                        android:drawableRight="@mipmap/sortdown"
+                        android:fontFamily="@font/montserratregular"
+                        android:hint="Select education Type"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="20dp" />
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="50dp"
+                        android:src="@mipmap/sortdown" />
+                </FrameLayout>
+
+                <Button
+                    android:id="@+id/select_pro_next_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/roundloginreg"
+                    android:fontFamily="@font/montserratextrabold"
+                    android:hint="Next"
+                    android:textColorHint="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/uni_form_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/spinnereds"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/border_edit"
+                    android:fontFamily="@font/montserratregular"
+                    android:hint="University Name"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp" />
+
+                <EditText
+                    android:id="@+id/spinneredss"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/border_edit"
+                    android:fontFamily="@font/montserratregular"
+                    android:hint="Details"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp" />
+
+                <EditText
+                    android:id="@+id/spinneredssswsad"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/border_edit"
+                    android:drawableEnd="@drawable/attachment"
+                    android:fontFamily="@font/montserratregular"
+                    android:hint="Logo"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/previous_id"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="39dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/roundloginreg"
+                        android:fontFamily="@font/montserratextrabold"
+                        android:hint="Previous"
+                        android:textColorHint="@color/white" />
+
+                    <Button
+                        android:id="@+id/next_fac_id"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="39dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/roundloginreg"
+                        android:fontFamily="@font/montserratextrabold"
+                        android:hint="Next"
+                        android:textColorHint="@color/white" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fac_form_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/spisnneredss"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/border_edit"
+                    android:fontFamily="@font/montserratregular"
+                    android:hint="Faculty Name"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp" />
+
+                <EditText
+                    android:id="@+id/spinnesredss"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/border_edit"
+                    android:fontFamily="@font/montserratregular"
+                    android:hint="Details"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp" />
+
+                <EditText
+                    android:id="@+id/spinnersedsssswsad"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/border_edit"
+                    android:drawableEnd="@drawable/attachment"
+                    android:fontFamily="@font/montserratregular"
+                    android:hint="Logo"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp" />
+
+
+                <EditText
+                    android:id="@+id/spinnesrsedsssswsad"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/border_edit"
+                    android:drawableEnd="@mipmap/sortdown"
+                    android:fontFamily="@font/montserratregular"
+                    android:hint="Study Years"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/previous_fac_id"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="39dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/roundloginreg"
+                        android:fontFamily="@font/montserratextrabold"
+                        android:hint="Previous"
+                        android:textColorHint="@color/white" />
+
+                    <Button
+                        android:id="@+id/next_sec_id"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="39dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/roundloginreg"
+                        android:fontFamily="@font/montserratextrabold"
+                        android:hint="Next"
+                        android:textColorHint="@color/white" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sec_form_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/spisddnneredss"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/border_edit"
+                    android:fontFamily="@font/montserratregular"
+                    android:hint="Section Name"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp" />
+
+                <EditText
+                    android:id="@+id/spddinnesredss"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/border_edit"
+                    android:fontFamily="@font/montserratregular"
+                    android:hint="Details"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp" />
+
+                <EditText
+                    android:id="@+id/spinddnersedsssswsad"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/border_edit"
+                    android:drawableEnd="@drawable/attachment"
+                    android:fontFamily="@font/montserratregular"
+                    android:hint="Fees"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp" />
+
+
+                <EditText
+                    android:id="@+id/spinddddnesrsedsssswsad"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/border_edit"
+                    android:drawableEnd="@mipmap/sortdown"
+                    android:fontFamily="@font/montserratregular"
+                    android:hint="Currency"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/privddate_isnstitute_isd"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="39dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/roundloginreg"
+                        android:fontFamily="@font/montserratextrabold"
+                        android:hint="Save and more"
+                        android:textColorHint="@color/white" />
+
+                    <Button
+                        android:id="@+id/private_insstsssitute_idds"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="39dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/roundloginreg"
+                        android:fontFamily="@font/montserratextrabold"
+                        android:hint="Skip"
+                        android:textColorHint="@color/white" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/next_data_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/roundloginreg"
+                    android:fontFamily="@font/montserratextrabold"
+                    android:hint="Next"
+                    android:textColorHint="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/data_form_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/spinneredsda"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/border_edit"
+                    android:fontFamily="@font/montserratregular"
+                    android:hint="Email address"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp" />
+
+                <EditText
+                    android:id="@+id/spinnsseredss"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/border_edit"
+                    android:fontFamily="@font/montserratregular"
+                    android:hint="Password"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp" />
+
+                <EditText
+                    android:id="@+id/spinnerssedssswsad"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/border_edit"
+                    android:fontFamily="@font/montserratregular"
+                    android:hint="Confirm Password"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/previous_data_id"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="39dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/roundloginreg"
+                        android:fontFamily="@font/montserratextrabold"
+                        android:hint="Previous"
+                        android:textColorHint="@color/white" />
+
+                    <Button
+                        android:id="@+id/next_data_id"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="39dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/roundloginreg"
+                        android:fontFamily="@font/montserratextrabold"
+                        android:hint="Next"
+                        android:textColorHint="@color/white" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ver_form_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_marginTop="22dp"
+                    android:fontFamily="@font/montserratsemibold"
+                    android:text="Verification"
+                    android:textColor="@color/black"
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:id="@+id/spsinneredsda"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/border_edit"
+                    android:fontFamily="@font/montserratregular"
+                    android:hint="Enter Verification Code"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/montserratregular"
+
+                        android:text="Don't you get the SMS" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="30dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/montserratregular"
+                        android:gravity="end"
+                        android:text="Resend"
+                        android:textColor="@color/blue" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/previous_ver_id"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="39dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/roundloginreg"
+                        android:fontFamily="@font/montserratextrabold"
+                        android:hint="Previous"
+                        android:textColorHint="@color/white" />
+
+                    <Button
+                        android:id="@+id/next_ver_id"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="39dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/roundloginreg"
+                        android:fontFamily="@font/montserratextrabold"
+                        android:hint="Next"
+                        android:textColorHint="@color/white" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fl_form_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/spiddnneredsda"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/border_edit"
+                    android:fontFamily="@font/montserratregular"
+                    android:hint="First Name"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp" />
+
+                <EditText
+                    android:id="@+id/spdinnsseredss"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/border_edit"
+                    android:fontFamily="@font/montserratregular"
+                    android:hint="Last Name"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp" />
+
+                <EditText
+                    android:id="@+id/spidnnerssedssswsad"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/border_edit"
+                    android:fontFamily="@font/montserratregular"
+                    android:hint="PIN"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+
+                    <Button
+                        android:id="@+id/previous_fl_id"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="39dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/roundloginreg"
+                        android:fontFamily="@font/montserratextrabold"
+                        android:hint="Previous"
+                        android:textColorHint="@color/white" />
+
+                    <Button
+                        android:id="@+id/finish_data_id"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="39dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/border_solid_add_spec"
+                        android:fontFamily="@font/montserratextrabold"
+                        android:text="finish"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--/////////////////////////////////INSTITUTE///////////////////////////////////-->
+
+            <LinearLayout
+                android:id="@+id/uni_form_inst_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/spxxxinnereds"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/border_edit"
+                    android:fontFamily="@font/montserratregular"
+                    android:hint="Private Institute Name"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp" />
+
+                <EditText
+                    android:id="@+id/sxxpinneredss"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/border_edit"
+                    android:fontFamily="@font/montserratregular"
+                    android:hint="Details"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp" />
+
+                <EditText
+                    android:id="@+id/sxxxpinneredssswsad"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/border_edit"
+                    android:drawableEnd="@drawable/attachment"
+                    android:fontFamily="@font/montserratregular"
+                    android:hint="Logo"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp" />
+
+
+                <EditText
+                    android:id="@+id/spinnesrsedsssssswsad"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/border_edit"
+                    android:drawableEnd="@mipmap/sortdown"
+                    android:fontFamily="@font/montserratregular"
+                    android:hint="Study Years"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/previous_inst_id"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="39dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/roundloginreg"
+                        android:fontFamily="@font/montserratextrabold"
+                        android:hint="Previous"
+                        android:textColorHint="@color/white" />
+
+                    <Button
+                        android:id="@+id/next_fac_inst_id"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="39dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/roundloginreg"
+                        android:fontFamily="@font/montserratextrabold"
+                        android:hint="Next"
+                        android:textColorHint="@color/white" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fac_form_inst_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/spsisnneredsss"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/border_edit"
+                    android:fontFamily="@font/montserratregular"
+                    android:hint="Course Name"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp" />
+
+                <EditText
+                    android:id="@+id/sspinnesredss"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/border_edit"
+                    android:fontFamily="@font/montserratregular"
+                    android:hint="Details"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/previous_fac_inst_id"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="39dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/roundloginreg"
+                        android:fontFamily="@font/montserratextrabold"
+                        android:hint="Previous"
+                        android:textColorHint="@color/white" />
+
+                    <Button
+                        android:id="@+id/next_sec_inst_id"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="39dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/roundloginreg"
+                        android:fontFamily="@font/montserratextrabold"
+                        android:hint="Next"
+                        android:textColorHint="@color/white" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sec_form_inst_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/spisassddnneredss"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/border_edit"
+                    android:fontFamily="@font/montserratregular"
+                    android:hint="Certifications Name"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp" />
+
+                <EditText
+                    android:id="@+id/spddrrinnesredss"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/border_edit"
+                    android:fontFamily="@font/montserratregular"
+                    android:hint="Details"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp" />
+
+                <EditText
+                    android:id="@+id/spinddnerrrsedsssswsad"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/border_edit"
+                    android:drawableEnd="@drawable/attachment"
+                    android:fontFamily="@font/montserratregular"
+                    android:hint="Fees"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp" />
+
+
+                <EditText
+                    android:id="@+id/spinddrddnesrsedsssswsad"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/border_edit"
+                    android:drawableEnd="@mipmap/sortdown"
+                    android:fontFamily="@font/montserratregular"
+                    android:hint="Currency"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/privddate_isnstitute_inst_isd"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="39dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/roundloginreg"
+                        android:fontFamily="@font/montserratextrabold"
+                        android:hint="Save and more"
+                        android:textColorHint="@color/white" />
+
+                    <Button
+                        android:id="@+id/private_insstssssditute_idds"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="39dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/roundloginreg"
+                        android:fontFamily="@font/montserratextrabold"
+                        android:hint="Skip"
+                        android:textColorHint="@color/white" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/next_data_inst_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/roundloginreg"
+                    android:fontFamily="@font/montserratextrabold"
+                    android:hint="Next"
+                    android:textColorHint="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/data_form_inst_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/spinntsseredsda"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/border_edit"
+                    android:fontFamily="@font/montserratregular"
+                    android:hint="Email address"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp" />
+
+                <EditText
+                    android:id="@+id/spinnsttseredss"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/border_edit"
+                    android:fontFamily="@font/montserratregular"
+                    android:hint="Password"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp" />
+
+                <EditText
+                    android:id="@+id/spinnerssttedssswsad"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/border_edit"
+                    android:fontFamily="@font/montserratregular"
+                    android:hint="Confirm Password"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/previous_data_inst_id"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="39dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/roundloginreg"
+                        android:fontFamily="@font/montserratextrabold"
+                        android:hint="Previous"
+                        android:textColorHint="@color/white" />
+
+                    <Button
+                        android:id="@+id/next_data_inst_id"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="39dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/roundloginreg"
+                        android:fontFamily="@font/montserratextrabold"
+                        android:hint="Next"
+                        android:textColorHint="@color/white" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ver_form_inst_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_marginTop="22dp"
+                    android:fontFamily="@font/montserratsemibold"
+                    android:text="Verification"
+                    android:textColor="@color/black"
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:id="@+id/spsinnerhhedsda"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/border_edit"
+                    android:fontFamily="@font/montserratregular"
+                    android:hint="Enter Verification Code"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/montserratregular"
+
+                        android:text="Don't you get the SMS" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="30dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/montserratregular"
+                        android:gravity="end"
+                        android:text="Resend"
+                        android:textColor="@color/blue" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/previous_ver_inst_id"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="39dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/roundloginreg"
+                        android:fontFamily="@font/montserratextrabold"
+                        android:hint="Previous"
+                        android:textColorHint="@color/white" />
+
+                    <Button
+                        android:id="@+id/next_ver_inst_id"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="39dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/roundloginreg"
+                        android:fontFamily="@font/montserratextrabold"
+                        android:hint="Next"
+                        android:textColorHint="@color/white" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fl_form_inst_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/spiddeenneredsda"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/border_edit"
+                    android:fontFamily="@font/montserratregular"
+                    android:hint="First Name"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp" />
+
+                <EditText
+                    android:id="@+id/spdieennsseredss"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/border_edit"
+                    android:fontFamily="@font/montserratregular"
+                    android:hint="Last Name"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp" />
+
+                <EditText
+                    android:id="@+id/spidnnereessedssswsad"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/border_edit"
+                    android:fontFamily="@font/montserratregular"
+                    android:hint="PIN"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+
+                    <Button
+                        android:id="@+id/previous_fl_inst_id"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="39dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/roundloginreg"
+                        android:fontFamily="@font/montserratextrabold"
+                        android:hint="Previous"
+                        android:textColorHint="@color/white" />
+
+                    <Button
+                        android:id="@+id/finish_data_inst_id"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="39dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/border_solid_add_spec"
+                        android:fontFamily="@font/montserratextrabold"
+                        android:text="finish"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+            </LinearLayout>
+            <!--////////////////////////////////E-Learning/////////////////////////////////-->
+            <LinearLayout
+                android:id="@+id/E_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Spinner
+                        android:id="@+id/spinner_elearning_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="@drawable/border_edit"
+                        android:drawableRight="@mipmap/sortdown"
+                        android:fontFamily="@font/montserratregular"
+                        android:hint="E_Learning Type"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="20dp" />
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="50dp"
+                        android:src="@mipmap/sortdown" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/previous_E_id"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="39dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/roundloginreg"
+                        android:fontFamily="@font/montserratextrabold"
+                        android:hint="Previous"
+                        android:textColorHint="@color/white" />
+
+                    <Button
+                        android:id="@+id/next_E_id"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="39dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/roundloginreg"
+                        android:fontFamily="@font/montserratextrabold"
+                        android:hint="Next"
+                        android:textColorHint="@color/white" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

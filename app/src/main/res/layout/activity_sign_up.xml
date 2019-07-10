@@ -1230,7 +1230,9 @@
                         android:textColor="@color/white" />
                 </LinearLayout>
             </LinearLayout>
+
             <!--////////////////////////////////E-Learning/////////////////////////////////-->
+
             <LinearLayout
                 android:id="@+id/E_id"
                 android:layout_width="match_parent"

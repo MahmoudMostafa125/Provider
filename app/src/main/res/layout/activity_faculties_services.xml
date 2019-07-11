@@ -148,7 +148,7 @@
             android:textColor="@color/dark_gray" />
 
         <Button
-            android:id="@+id/login_id"
+            android:id="@+id/sec"
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:layout_marginStart="20dp"

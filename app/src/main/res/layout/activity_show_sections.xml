@@ -40,7 +40,7 @@
                 android:layout_marginStart="20dp"
                 android:fontFamily="@font/montserratbold"
                 android:gravity=""
-                android:text="Faculties"
+                android:text="Sections"
                 android:textColor="@color/white"
                 android:textSize="20dp" />
         </FrameLayout>

@@ -1,10 +1,12 @@
 package com.silicon.provider.Activities;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -17,6 +19,8 @@ public class UpdateProfile extends AppCompatActivity {
     LinearLayout Profile, Service, AddServidce;
     ImageView proImg, ServiceImg, AddServiceImg;
     TextView proTxt, ServiceTxt, AddServiceTxt;
+    Button MyserButton;
+    ImageView imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +37,7 @@ public class UpdateProfile extends AppCompatActivity {
         proTxt= findViewById(R.id.txtpro);
         ServiceTxt= findViewById(R.id.sertxt);
         AddServiceTxt= findViewById(R.id.addsertxt);
+        MyserButton= findViewById(R.id.myser);
 
         Profile.setOnTouchListener(new View.OnTouchListener() {
             @Override
@@ -72,17 +77,29 @@ public class UpdateProfile extends AppCompatActivity {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 if (event.getAction() == (MotionEvent.ACTION_UP) && event.getAction() != (MotionEvent.ACTION_MOVE)) {
-
                     AddServiceImg.setImageResource(R.drawable.plus);
                     AddServiceTxt.setTextColor(Color.parseColor("#444444"));
-
-
                 } else {
                     AddServiceImg.setImageResource(R.drawable.plusplue);
                     AddServiceTxt.setTextColor(Color.parseColor("#2C50ED"));
                 }
                 return true;
 
+            }
+        });
+
+        MyserButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(UpdateProfile.this, MyServices.class);
+                startActivity(intent);
+            }
+        });
+        imageView =findViewById(R.id.back);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
             }
         });
     }

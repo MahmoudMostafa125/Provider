@@ -179,7 +179,7 @@
                 android:textColor="@color/dark_gray" />
 
             <Button
-                android:id="@+id/button6"
+                android:id="@+id/myser"
                 android:layout_width="190dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
